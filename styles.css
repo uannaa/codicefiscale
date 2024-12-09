@@ -1,3 +1,125 @@
-/* body {
+body {
+    font-family: "Parkinsans", sans-serif;
     background-color: black;
-} */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* overflow: hidden; */
+}
+
+.image-container {
+    position: relative;
+    width: 99%;
+    height: 99%;
+}  
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(20px);
+    transition: filter 0.3s ease;
+}
+
+input,
+select {
+
+    font-family: "Parkinsans", sans-serif;
+
+}
+
+.container {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(88, 74, 87, 0.322);
+    padding: 20px;
+    border-radius: 17px;
+    /* border: 1px solid #0000001a; */
+    box-shadow: 0 3px 20px rgb(134, 72, 114);
+    max-width: 400px;
+    width: 100%;
+    z-index: 10;
+}
+
+.container form p {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.row .luogo {
+    flex: 3;
+}
+
+.row .sesso {
+    flex: 1;
+}
+
+.container input[type="text"],
+.container input[type="date"],
+.container select {
+    color: white;
+    padding: 10px;
+    border: 1px solid #cccccc62;
+    border-radius: 9px;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.048);
+    box-sizing: border-box;
+}
+
+.container input[type="button"] {
+    padding: 10px 15px; 
+    background-color: #8c01ae;
+    color: white;
+    font-family: "Parkinsans", sans-serif;
+    border: none;
+    border-radius: 9px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.container input[type="button"]:hover {
+    background-color: #640d7a;
+}
+
+.container input[type="button"]:active {
+    background-color: #6a0186; /* Colore più scuro per un effetto "premuto" */
+    transform: scale(0.87); /* Leggera riduzione della scala per un effetto clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra per profondità */
+}
+
+
+.container input:focus,
+.container select:focus {
+    outline: none;
+    border: 1px solid #00000027;
+    box-shadow: 0 0 3px rgba(41, 41, 41, 0.5);
+}
+
+.container select option {
+    color: black;
+    text-align: left;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
