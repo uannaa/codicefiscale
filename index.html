@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <title>Codice Fiscale</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>uannaa website</h1>
+    <div class="image-container">
+        <img src="https://4kwallpapers.com/images/wallpapers/mountain-peaks-3840x2160-10979.jpg" alt="background">
+        <div class="container">
+            <form name="f1">
+                <p>Nome: <input type="text" name="nome_in" id="name" placeholder="Inserisci qui il nome"></p>
+                <p>Cognome: <input type="text" name="cognome_in" id="surname" placeholder="Inserisci qui il cognome" required></p>
+                <p>Data di nascita: <input type="date" name="date_in" id="date_id"></p>
+                <div class="row">
+                    <p class="luogo">
+                        Luogo di nascita: <input type="text" name="luogo" id="luogo_f" placeholder="Inserisci qui il luogo di nascita">
+                    </p>
+                    <p class="sesso">
+                        Sesso:
+                        <select name="gender" id="gender">
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                        </select>
+                    </p>
+                </div>
+            </form>
+            <center><div id="error-container" style="color: red;"></div></center>
+            <input type="button" value="CALCOLA" onclick="main()">
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
